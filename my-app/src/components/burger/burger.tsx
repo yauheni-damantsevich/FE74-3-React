@@ -1,9 +1,10 @@
-import React, { useState } from "react";
-import burgerIcon from "./menu.png";
-import { Menu } from "../index";
+import React, { useState } from 'react'
+import burgerIcon from '../../assets/menu.png'
+import { Menu } from '../menu/menu'
+import { BurgerProps } from './types'
 
 const Burger = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false)
   return (
     <div>
       <button onClick={() => setOpen(!open)}>
@@ -15,7 +16,7 @@ const Burger = () => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default Burger;
+export default Burger

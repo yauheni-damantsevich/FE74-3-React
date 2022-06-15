@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.css";
-import accountIcon from "./account.png";
-import backgroundImage from "./background.jpg";
-import { Burger } from "./components/index";
-import { MainBlock } from "./components/index";
+import accountIcon from "../../assets/account.png";
+import backgroundImage from "../../assets/background.jpg";
+import { Burger } from "../../components/index";
+import { MainBlock } from "../../components/index";
 
 const username = "Yauheni Damantsevich";
 
