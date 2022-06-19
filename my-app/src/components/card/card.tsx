@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ICard, ICardProps } from "./types";
+import { ICardProps } from "./types";
 import { Wrapper, Img, H2, Paragraph, Date } from "./styled";
 
 export const Card = ({ image, text, date, title }: ICardProps): JSX.Element => {

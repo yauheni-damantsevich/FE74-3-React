@@ -12,7 +12,6 @@ export const Main = styled.div`
 
 export const MainWrapper = styled.div`
   max-height: 100vh;
-  overflow: hidden;
 `;
 
 export const Container = styled.div`

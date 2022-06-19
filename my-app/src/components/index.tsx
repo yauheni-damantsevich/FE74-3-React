@@ -5,3 +5,4 @@ export { Menu } from "./menu/menu";
 export { Header } from "./header/header";
 export { MainBlock } from "./main-block/main-block";
 export { Card } from "./card/card";
+export { CardList } from "./card-list/card-list";
