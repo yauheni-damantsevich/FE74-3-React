@@ -1,26 +1,34 @@
-import React from 'react'
-const allPosts = 'All Posts'
-const myPosts = 'My Posts'
-const addPosts = 'Add Posts'
-const logOut = 'Log Out'
+import React from "react";
+import { IMenu } from "./types";
+import {
+  MenuWrapper,
+  UnorderedListWrapper,
+  UnorderedList,
+  ListItem,
+} from "./styled";
 
-export const Menu = () => {
+export function Menu({
+  allPosts,
+  myPosts,
+  addPosts,
+  logOut,
+}: IMenu): JSX.Element {
   return (
-    <div className="flex bg-white rounded-tl-lg rounded-br-lg p-4 drop-shadow-xl gap-8">
-      <div className="flex gap-8">
-        <ul className="min-w-max font-normal">
-          <li>{allPosts}</li>
-        </ul>
-        <ul className="min-w-max">
-          <li className="mb-6">{myPosts}</li>
-          <li>{addPosts}</li>
-        </ul>
-      </div>
-      <div>
-        <ul className="min-w-max">
-          <li>{logOut}</li>
-        </ul>
-      </div>
-    </div>
-  )
+    <MenuWrapper>
+      <UnorderedListWrapper className="flex gap-8">
+        <UnorderedList className="min-w-max font-normal">
+          <ListItem>{allPosts}</ListItem>
+        </UnorderedList>
+        <UnorderedList className="min-w-max">
+          <ListItem className="mb-6">{myPosts}</ListItem>
+          <ListItem>{addPosts}</ListItem>
+        </UnorderedList>
+      </UnorderedListWrapper>
+      <UnorderedListWrapper>
+        <UnorderedList className="min-w-max">
+          <ListItem>{logOut}</ListItem>
+        </UnorderedList>
+      </UnorderedListWrapper>
+    </MenuWrapper>
+  );
 }
