@@ -25,7 +25,7 @@ export const Container = styled.div`
 export const MainBlockWrapper = styled.div`
   z-index: 10;
   position: absolute;
-  top: 25%;
+  top: 50%;
 `;
 
 export const Img = styled.img`
