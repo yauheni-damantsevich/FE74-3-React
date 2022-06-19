@@ -1,43 +1,34 @@
 import React from "react";
 import "./App.css";
-import backgroundImage from "../../assets/background.jpg";
-import { MainBlock } from "../../components/index";
 import { Header } from "../../components/header/header";
-import { IMainBlock } from "../../components/main-block/types";
-import {
-  MainDiv,
-  Main,
-  MainWrapper,
-  Container,
-  MainBlockWrapper,
-  Img,
-} from "./styled";
+import { ICard } from "../../components/card/types";
+import { Card } from "../../components/index";
+import { MainDiv, Main, MainWrapper, Container } from "./styled";
 
-const content: IMainBlock = {
-  header: "Make your Blog ",
-  online: "Online",
-  paragraph:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  learnMoreButton: "Learn More",
+const cardObject: ICard = {
+  id: 0,
+  image: "string",
+  text: "string",
+  date: "2021-12-12",
+  lesson_num: 0,
+  title: "string",
+  author: 0,
 };
 
-function App(): JSX.Element {
+export function App(): JSX.Element {
   return (
     <MainDiv className="App">
       <Header />
       <Main>
         <MainWrapper>
           <Container>
-            <MainBlockWrapper>
-              <MainBlock
-                header={content.header}
-                online={content.online}
-                paragraph={content.paragraph}
-                learnMoreButton={content.learnMoreButton}
-              />
-            </MainBlockWrapper>
+            <Card
+              image={cardObject.image}
+              text={cardObject.text}
+              date={cardObject.date}
+              title={cardObject.title}
+            />
           </Container>
-          <Img src={backgroundImage} alt="background" className="" />
         </MainWrapper>
       </Main>
     </MainDiv>
