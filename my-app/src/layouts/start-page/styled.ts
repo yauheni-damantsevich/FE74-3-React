@@ -15,7 +15,6 @@ export const MainWrapper = styled.div`
 `;
 
 export const Container = styled.div`
-  width: 100%;
   margin: auto;
   padding: 0 16px 0 16px;
   display: flex;
