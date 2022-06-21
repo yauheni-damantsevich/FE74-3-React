@@ -1,30 +1,18 @@
 import React from "react";
 import "./App.css";
 import { Header } from "./components/index";
-import { Success } from "./layouts/success/success";
-import { ISuccess } from "./layouts/success/types";
-import { MainDiv, Main, MainWrapper, Container } from "./styled";
+import { SelectedPost } from "./layouts/selected-post/selected-post";
+import { ISelectedPost } from "./layouts/selected-post/types";
+import { MainDiv, Main } from "./styled";
 
-export const successData: ISuccess = {
-  title: "Success",
-  paragraph: "Email confirmed. Your registration is now completed",
-  buttonText: "Login",
-};
+const PageTitle: ISelectedPost = { selectedPostTitle: "Selected Post" };
 
 export function App(): JSX.Element {
   return (
     <MainDiv className="App">
       <Header />
       <Main>
-        <MainWrapper>
-          <Container>
-            <Success
-              title={successData.title}
-              paragraph={successData.paragraph}
-              buttonText={successData.buttonText}
-            />
-          </Container>
-        </MainWrapper>
+        <SelectedPost selectedPostTitle={PageTitle.selectedPostTitle} />
       </Main>
     </MainDiv>
   );

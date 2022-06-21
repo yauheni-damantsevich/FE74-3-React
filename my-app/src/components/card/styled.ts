@@ -15,7 +15,7 @@ export const Img = styled.img`
   display: flex;
   object-fit: cover;
 `;
-export const H2 = styled.h2`
+export const H3 = styled.h3`
   font-size: 18px;
 `;
 export const Paragraph = styled.p`
