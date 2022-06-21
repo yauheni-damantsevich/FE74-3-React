@@ -1,8 +1,15 @@
 import React from "react";
 import "./App.css";
 import { Header } from "./components/index";
-import { Login } from "./layouts/login/login";
+import { Success } from "./layouts/success/success";
+import { ISuccess } from "./layouts/success/types";
 import { MainDiv, Main, MainWrapper, Container } from "./styled";
+
+export const successData: ISuccess = {
+  title: "Success",
+  paragraph: "Email confirmed. Your registration is now completed",
+  buttonText: "Login",
+};
 
 export function App(): JSX.Element {
   return (
@@ -11,7 +18,11 @@ export function App(): JSX.Element {
       <Main>
         <MainWrapper>
           <Container>
-            <Login />
+            <Success
+              title={successData.title}
+              paragraph={successData.paragraph}
+              buttonText={successData.buttonText}
+            />
           </Container>
         </MainWrapper>
       </Main>
