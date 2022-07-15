@@ -1,11 +1,9 @@
 import React from "react";
-import { IBurgerAccountButton } from "./types";
 import { Button, Icon, AccountName } from "./styled";
+import accountIcon from "../../assets/account.svg";
+const username = "Yauheni Damantsevich";
 
-export const BurgerAccountButton = ({
-  username,
-  accountIcon,
-}: IBurgerAccountButton): JSX.Element => {
+export const Account = (): JSX.Element => {
   return (
     <Button>
       <Icon src={accountIcon} />

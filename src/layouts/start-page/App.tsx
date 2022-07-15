@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
-import { Header, CardList } from "../../components/index";
+import { Header } from "../../components/header/header";
+import { CardList } from "../../components/card-list/card-list";
 import { MainDiv, Main, MainWrapper, Container } from "./styled";
 
 export function App(): JSX.Element {

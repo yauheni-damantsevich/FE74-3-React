@@ -5,8 +5,8 @@ export const MainDiv = styled.div`
 `;
 
 export const Main = styled.div`
-  display: absolute;
-  width: 100%
+  position: absolute;
+  width: 100%;
   justify-content: center;
 `;
 
