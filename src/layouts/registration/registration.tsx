@@ -12,16 +12,15 @@ import {
   Input,
   SubmitButton,
   SubmitInput,
-  EmailPasswordWrapper,
+  Wrapper,
   ForgotPasswordWrapper,
 } from "./styled";
 
-const LoginTitle = "Login";
-const RegistrationTitle = "Registration";
-
-export function Login(): JSX.Element {
+export function Registration(): JSX.Element {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
+  const [username, setUsername] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const handleSubmit = (e: React.FormEvent): void => {
@@ -37,7 +36,7 @@ export function Login(): JSX.Element {
               setOpen(!open);
             }}
           >
-            {LoginTitle}
+            Login
           </LoginTitleButton>
           <RegistrationTitleButton
             onClick={() => {
@@ -45,12 +44,22 @@ export function Login(): JSX.Element {
               setOpen(!open);
             }}
           >
-            {RegistrationTitle}
+            Registration
           </RegistrationTitleButton>
         </RegistrationNavigation>
 
         <Form onSubmit={handleSubmit}>
-          <EmailPasswordWrapper>
+          <Wrapper>
+            <Label htmlFor="username">Email</Label>
+            <Input
+              placeholder="Your Name"
+              type="username"
+              id="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+          </Wrapper>
+          <Wrapper>
             <Label htmlFor="email">Email</Label>
             <Input
               placeholder="Your Email"
@@ -59,8 +68,8 @@ export function Login(): JSX.Element {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-          </EmailPasswordWrapper>
-          <EmailPasswordWrapper>
+          </Wrapper>
+          <Wrapper>
             <Label htmlFor="password">Password</Label>
             <Input
               placeholder="Your Password"
@@ -69,8 +78,18 @@ export function Login(): JSX.Element {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-          </EmailPasswordWrapper>
-          <SubmitButton className="button-container">
+          </Wrapper>
+          <Wrapper>
+            <Label htmlFor="confirmPassword">Confirm Password</Label>
+            <Input
+              placeholder="Confirm Password"
+              type="password"
+              id="confirmPassword"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+            />
+          </Wrapper>
+          <SubmitButton>
             <SubmitInput type="submit" />
           </SubmitButton>
           <ForgotPasswordWrapper></ForgotPasswordWrapper>

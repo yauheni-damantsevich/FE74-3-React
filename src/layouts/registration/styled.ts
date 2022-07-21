@@ -31,16 +31,16 @@ export const LoginTitleButton = styled.button`
   background-color: #fff;
   border: none;
   font-size: 24px;
+  color: #8d8e97;
 `;
 
 export const RegistrationTitleButton = styled.button`
   background-color: #fff;
   border: none;
   font-size: 24px;
-  color: #8d8e97;
 `;
 
-export const EmailPasswordWrapper = styled.div`
+export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 40px;
