@@ -26,3 +26,9 @@ export const Button = styled.button`
   font-size: 18px;
   color: #fff;
 `;
+
+export const MainBlockWrapper = styled.div`
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+`;

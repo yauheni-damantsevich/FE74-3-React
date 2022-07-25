@@ -10,10 +10,15 @@ import {
 } from "./styled";
 import { MainDiv } from "./styled";
 import burgerIcon from "../../assets/menu.svg";
+import { useAuth } from "../../services/useAuth";
 
 export const Burger = (): JSX.Element => {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
+  const { logout } = useAuth();
+  const handleLogout = (): void => {
+    logout();
+  };
   return (
     <MainDiv>
       <Button onClick={() => setOpen(!open)}>
@@ -22,6 +27,16 @@ export const Burger = (): JSX.Element => {
       {open && (
         <MenuWrapper>
           <List>
+            <ListItem>
+              <ListButton
+                onClick={() => {
+                  navigate("/main");
+                  setOpen(!open);
+                }}
+              >
+                Main
+              </ListButton>
+            </ListItem>
             <ListItem>
               <ListButton
                 onClick={() => {
@@ -39,7 +54,14 @@ export const Burger = (): JSX.Element => {
               <ListButton>Add Posts</ListButton>
             </ListItem>
             <ListItem>
-              <ListButton>Logout</ListButton>
+              <ListButton
+                onClick={() => {
+                  handleLogout();
+                  setOpen(!open);
+                }}
+              >
+                Logout
+              </ListButton>
             </ListItem>
           </List>
         </MenuWrapper>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { useAuth } from "../../services/useAuth";
+import { Account } from "../../components/account/account";
 import {
   Container,
   MainWrapper,
@@ -24,8 +25,11 @@ export function Login(): JSX.Element {
   const [open, setOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const handleSubmit = (e: React.FormEvent): void => {
+  const { login } = useAuth();
+  const handleSubmit = async (e: React.FormEvent): Promise<void> => {
     e.preventDefault();
+    await login(email, password);
+    navigate("/all_posts");
   };
   return (
     <Container>

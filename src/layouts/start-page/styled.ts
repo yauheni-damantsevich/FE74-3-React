@@ -6,7 +6,7 @@ export const MainDiv = styled.div`
 
 export const Main = styled.div`
   display: absolute;
-  width: 100%
+  width: 100%;
   justify-content: center;
 `;
 
@@ -21,11 +21,5 @@ export const Container = styled.div`
 `;
 
 export const MainBlockWrapper = styled.div`
-  z-index: 10;
-  position: absolute;
-  top: 25%;
-`;
-
-export const Img = styled.img`
-  width: 100vw;
+  padding: 250px;
 `;

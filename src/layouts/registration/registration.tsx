@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { register } from "../../services/auth.service";
 
 import {
   Container,
@@ -25,6 +26,7 @@ export function Registration(): JSX.Element {
   const [password, setPassword] = useState("");
   const handleSubmit = (e: React.FormEvent): void => {
     e.preventDefault();
+    register(username, email, password);
   };
   return (
     <Container>
@@ -50,7 +52,7 @@ export function Registration(): JSX.Element {
 
         <Form onSubmit={handleSubmit}>
           <Wrapper>
-            <Label htmlFor="username">Email</Label>
+            <Label htmlFor="username">Username</Label>
             <Input
               placeholder="Your Name"
               type="username"
