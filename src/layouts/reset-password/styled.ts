@@ -20,27 +20,7 @@ export const Form = styled.form`
   border-radius: 4px;
 `;
 
-export const RegistrationNavigation = styled.div`
-  display: flex;
-  margin: 40px 0 40px 0;
-  display: flex;
-  justify-content: space-evenly;
-`;
-
-export const LoginTitleButton = styled.button`
-  background-color: #fff;
-  border: none;
-  font-size: 24px;
-`;
-
-export const RegistrationTitleButton = styled.button`
-  background-color: #fff;
-  border: none;
-  font-size: 24px;
-  color: #8d8e97;
-`;
-
-export const EmailPasswordWrapper = styled.div`
+export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 40px;
@@ -65,13 +45,4 @@ export const SubmitInput = styled.input`
   padding: 18px;
   font-size: 18px;
   color: #fff;
-`;
-
-export const ForgotPasswordWrapper = styled.div`
-  margin-bottom: 40px;
-`;
-export const ForgotPasswordButton = styled.button`
-  background-color: transparent;
-  border: none;
-  text-decoration-line: underline;
 `;

@@ -8,6 +8,13 @@ export function register(username: string, email: string, password: string) {
     password,
   });
 }
+
+export function resetPassword(email: string) {
+  return axios.post(API_URL + "users/reset_password/", {
+    email,
+  });
+}
+
 export function getCurrentUser() {
   const userStr = localStorage.getItem("user");
   if (userStr) return JSON.parse(userStr);

@@ -4,9 +4,10 @@ import { Header } from "./components/header/header";
 import { Route, Routes } from "react-router-dom";
 import { MainDiv, Main, Container } from "./styled";
 import { AllPosts } from "./layouts/all-posts/all-posts";
-import { App as StartPage } from "./layouts/start-page/App";
+import { MainPage } from "./layouts/main-page/main-page";
 import { Login } from "./layouts/login/login";
 import { Registration } from "./layouts/registration/registration";
+import { ResetPassword } from "./layouts/reset-password/reset-password";
 import { ProtectedRoute } from "./components/protected-route/ProtectedRoute";
 export function App(): JSX.Element {
   return (
@@ -23,9 +24,10 @@ export function App(): JSX.Element {
                 </ProtectedRoute>
               }
             ></Route>
-            <Route path="/main" element={<StartPage />}></Route>
+            <Route path="/main" element={<MainPage />}></Route>
             <Route path="/login" element={<Login />}></Route>
             <Route path="/registration" element={<Registration />}></Route>
+            <Route path="/reset_password" element={<ResetPassword />}></Route>
           </Routes>
         </Container>
       </Main>

@@ -1,6 +1,4 @@
 import React from "react";
-import "./App.css";
-import { Header } from "../../components/header/header";
 import { MainBlock } from "../../components/main-block/main-block";
 import { Container, MainBlockWrapper } from "./styled";
 
@@ -19,7 +17,7 @@ const content: IMainBlock = {
   learnMoreButton: "Learn More",
 };
 
-export function App(): JSX.Element {
+export function MainPage(): JSX.Element {
   return (
     <main>
       <Container>
@@ -35,5 +33,3 @@ export function App(): JSX.Element {
     </main>
   );
 }
-
-export default App;

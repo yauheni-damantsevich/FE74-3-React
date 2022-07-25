@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../services/useAuth";
-import { Account } from "../../components/account/account";
 import {
   Container,
   MainWrapper,
@@ -15,6 +14,7 @@ import {
   SubmitInput,
   EmailPasswordWrapper,
   ForgotPasswordWrapper,
+  ForgotPasswordButton,
 } from "./styled";
 
 const LoginTitle = "Login";
@@ -22,7 +22,6 @@ const RegistrationTitle = "Registration";
 
 export function Login(): JSX.Element {
   const navigate = useNavigate();
-  const [open, setOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { login } = useAuth();
@@ -38,7 +37,6 @@ export function Login(): JSX.Element {
           <LoginTitleButton
             onClick={() => {
               navigate("/login");
-              setOpen(!open);
             }}
           >
             {LoginTitle}
@@ -46,7 +44,6 @@ export function Login(): JSX.Element {
           <RegistrationTitleButton
             onClick={() => {
               navigate("/registration");
-              setOpen(!open);
             }}
           >
             {RegistrationTitle}
@@ -74,10 +71,18 @@ export function Login(): JSX.Element {
               onChange={(e) => setPassword(e.target.value)}
             />
           </EmailPasswordWrapper>
-          <SubmitButton className="button-container">
+          <ForgotPasswordWrapper>
+            <ForgotPasswordButton
+              onClick={() => {
+                navigate("/reset_password");
+              }}
+            >
+              Forgot password?
+            </ForgotPasswordButton>
+          </ForgotPasswordWrapper>
+          <SubmitButton>
             <SubmitInput type="submit" />
           </SubmitButton>
-          <ForgotPasswordWrapper></ForgotPasswordWrapper>
         </Form>
       </MainWrapper>
     </Container>
